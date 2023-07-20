@@ -5,5 +5,5 @@ OldNamecall = hookmetamethod(game, "__namecall", newcclosure(function(Self, ...)
     if table.find(DetectedArguments, Arguments[1]) then
         return
     end
-    return OldNamecall(...)
+    return OldNamecall(Self, ...) -- oops i forgot Self
 end))
